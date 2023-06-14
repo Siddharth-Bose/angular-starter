@@ -7,6 +7,15 @@ import { Server } from 'src/app/Server.model';
   styleUrls: ['./cockpit.component.css']
 })
 export class CockpitComponent {
-  @Output() serverAdded!: EventEmitter<Server>;
-  @Output() blueprintAdded!: EventEmitter<Server>;
+  @Output() serverAdded= new EventEmitter<Server>;
+  @Output() blueprintAdded= new EventEmitter<Server>;
+  name!:string
+  content!:string
+  serverAdd(){
+    this.serverAdded.emit({name:this.name, content:this.content})
+  }
+  blueprintAdd(){
+    this.blueprintAdded.emit({name:this.name, content:this.content})
+    
+  }
 }

@@ -1,7 +1,7 @@
 <div class="container">
   <h2 class="text-center text-danger fs-2 my-3" >Add Servers</h2>
-    <app-cockpit></app-cockpit>
+    <app-cockpit (serverAdded)="addServer($event) " (blueprintAdded)="addBlueprint($event)"></app-cockpit>
   <div class="container">
     <app-server-item *ngFor="let server of servers" [server]="server"></app-server-item>
   </div>
-</div>
+</div>z

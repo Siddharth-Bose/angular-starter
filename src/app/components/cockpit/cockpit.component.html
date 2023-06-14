@@ -2,19 +2,19 @@
     <div class="col-md-12">
         <div class="form-group">
             <label for="Name" class="form-group-text">Name</label>
-            <input type="text" name="name" id="name" class="form-control">
+            <input type="text" name="name" id="name" class="form-control" [(ngModel)]="name">
         </div>
     </div>
     <div class="col-md-12">
         <div class="form-group">
             <label for="content" class="form-group-text" >Content</label>
-            <input type="text" name="content" id="content" class="form-control">
+            <input type="text" name="content" id="content" class="form-control" [(ngModel)]="content">
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
-            <button type="button" class="btn btn-success">Add Server</button>
-            <button type="button" class="btn btn-primary">Add Blueprint</button>
+            <button type="button" class="btn btn-success" (click)="serverAdd()">Add Server</button>
+            <button type="button" class="btn btn-primary" (click)="blueprintAdd()">Add Blueprint</button>
         </div>
     </div>
 </div>
