@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Server } from './Server.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ang-practice';
+  servers:Server[]=[
+    new Server('Server 1','Server 1 Content')
+  ];
+
+  
 }
